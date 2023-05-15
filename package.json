@@ -1,0 +1,32 @@
+{
+  "name": "flowee-chat",
+  "version": "0.1.0",
+  "description": "Simple module for communicating with the chat of a Flowee stream",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gohoski/flowee-chat.git"
+  },
+  "keywords": [
+    "flowee",
+    "chat",
+    "api",
+    "stream",
+    "livestream",
+    "live",
+    "rtmp",
+    "monday"
+  ],
+  "author": "gohoski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gohoski/flowee-chat/issues"
+  },
+  "homepage": "https://github.com/gohoski/flowee-chat#readme",
+  "dependencies": {
+    "ws": "^8.13.0"
+  }
+}

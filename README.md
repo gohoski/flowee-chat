@@ -13,7 +13,7 @@ const chat = new FloweeChat('ws://flowee.ru/api', '645532b4be16383418ce36cb');
 ```
 
 # Install
-This module requires Node.js ^8.13.0 or later.
+This module requires Node.js >=10.0.0.
 
 Install via `npm`:
 ```bash

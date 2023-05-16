@@ -1,6 +1,6 @@
 {
   "name": "flowee-chat",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Simple module for communicating with the chat of a Flowee stream",
   "main": "index.js",
   "scripts": {
@@ -28,5 +28,6 @@
   "homepage": "https://github.com/gohoski/flowee-chat#readme",
   "dependencies": {
     "ws": "^8.13.0"
-  }
+  },
+  "devDependencies": {}
 }

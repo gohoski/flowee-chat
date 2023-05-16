@@ -12,14 +12,14 @@ util.inherits(FloweeChat, EventEmitter);
 FloweeChat.prototype.on('message', function() {});
 FloweeChat.prototype.connect = () => {
 	return new Promise((resolve, reject) => {
-		this.client = new WebSocket(server + '/users/' + user + '/ws');
-		this.client.on('error', reject);
-		this.client.on('open', () => {
-			this.client.send('ping');
+		FloweeChat.prototype.client = new WebSocket(server + '/users/' + user + '/ws');
+		FloweeChat.prototype.client.once('error', reject);
+		FloweeChat.prototype.client.once('open', () => {
+			FloweeChat.prototype.client.send('ping');
 			resolve();
 		});
 		
-		this.client.on('message', data => {
+		FloweeChat.prototype.client.on('message', data => {
 			const message = data.toString('utf8');
 			if (message.includes('|')) {
 				const params = message.split('|');
@@ -33,6 +33,16 @@ FloweeChat.prototype.connect = () => {
 			}
 		});
 	})
+};
+FloweeChat.prototype.disconnect = () => {
+	return new Promise((resolve, reject) => {
+		if (!FloweeChat.prototype.client)
+			reject(new Error('Connect first!'));
+		FloweeChat.prototype.client.close();
+		FloweeChat.prototype.client.once('close', () => {
+			resolve();
+		});
+	});
 };
 
 module.exports = FloweeChat;
